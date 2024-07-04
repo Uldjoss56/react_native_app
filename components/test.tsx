@@ -32,7 +32,7 @@ export function Model(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials, animations } = useGLTF(
     '/model_73a_-_great_hammerhead_shark (1).glb'
   ) as GLTFResult
-  const { actions } = useAnimations<GLTFActions>(animations, group)
+  useAnimations<GLTFActions>(animations, group)
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Sketchfab_Scene">
